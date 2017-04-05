@@ -1,0 +1,237 @@
+/* init */
+
+body
+{
+  background-color  : rgba(0, 0, 50, 1);
+  font-family       : Verdana, "Courier New", "Lucida Console";
+  font-size         : 14px;
+  font-weight       : normal;
+  padding           : 0px;
+  margin            : 0px;
+  overflow          : hidden;
+}
+
+div, table, tr, td, th, h1, h2, h3, a, span, p, pre, fieldset, input, textarea, form, img, select
+{
+  font-family       : Verdana, "Courier New", "Lucida Console";
+  font-size         : 14px;
+  font-weight       : normal;
+  padding           : 0px;
+  margin            : 0px;
+  color             : #FFF;
+}
+
+/* main */
+
+div#main
+{
+  width             : 1366px;
+  height            : 768px;
+  position          : relative;
+  overflow          : hidden;
+  background-color  : rgba(0, 0, 0, 1);
+  color             : #FFF;
+}
+
+div#etalon
+{
+  top               : 0px;
+  position          : absolute;
+  overflow          : hidden;
+  background-color  : rgba(0, 0, 255, 0.3);
+  color             : #FFF;
+  font-size         : 50px;
+}
+
+/* horloge */
+
+div#horloge
+{
+  right             : 0px;
+  top               : 0px;
+  position          : absolute;
+  overflow          : hidden;
+  background-color  : rgba(0, 0, 0, 1);
+  color             : #FFF;
+  font-weight       : bold;
+  text-align        : center;
+}
+
+div.horloge_heure
+{
+  font-size         : 180px;
+  background-color  : rgba(0, 0, 0, 1);
+}
+
+div.horloge_date
+{
+  font-size         : 50px;
+  background-color  : rgba(0, 0, 0, 1);
+}
+
+span.horloge_grey
+{
+  color             : #888;
+  font-size         : inherit;
+}
+
+/* meteo */
+
+div#meteo
+{
+  right             : 0px;
+  top               : 300px;
+  position          : absolute;
+  overflow          : hidden;
+  background-color  : rgba(0, 0, 0, 1);
+  color             : #FFF;
+  font-weight       : bold;
+  text-align        : center;
+}
+
+div#meteo_black
+{
+  right             : 0px;
+  top               : 420px;
+  width             : 600px;
+  height            : 100px;
+  position          : absolute;
+  z-index           : 9999;
+  background-color  : rgba(0, 0, 0, 1);
+}
+
+/* ts3 */
+
+div#ts3
+{
+  left              : 340px;
+  bottom            : 10px;
+  position          : absolute;
+  overflow          : hidden;
+  background-color  : rgba(0, 0, 0, 1);
+  color             : #FFF;
+  font-weight       : bold;
+  text-align        : center;
+}
+
+td.ts3_user
+{
+  text-align        : left;
+  font-size         : 30px;
+  padding-left      : 10px;
+}
+
+/* ping */
+
+div#ping
+{
+  left              : 0px;
+  bottom            : 0px;
+  position          : absolute;
+  overflow          : hidden;
+  background-color  : rgba(0, 0, 0, 1);
+}
+
+td.ping
+{
+  font-size         : 30px;
+  text-align        : left;
+  border-radius     : 10px;
+  padding           : 5px 10px;
+  font-weight       : bold;
+}
+
+td.ping_up
+{
+  color             : #00DD00;
+}
+
+td.ping_down
+{
+  background-image  : url('pict/warning.gif');
+  color             : #DD0000;;
+}
+
+/* vpn */
+
+div#vpn
+{
+  left              : 550px;
+  bottom            : 10px;
+  position          : absolute;
+  overflow          : hidden;
+  background-color  : rgba(0, 0, 0, 1);
+  color : #FFF;
+}
+
+td.vpn
+{
+  text-align        : left;
+  font-size         : 30px;
+  padding           : 5px;
+}
+
+img.vpn
+{
+  width : 20px;
+  height : 20px;
+}
+
+/* earth */
+
+div#earth
+{
+  width             : 500px;
+  height            : 500px;
+  left              : 0px;
+  top               : 0px;
+  position          : absolute;
+  overflow          : hidden;
+  background-color  : rgba(0, 0, 0, 1);
+}
+
+/* moon */
+
+div#moon
+{
+  width             : 250px;
+  height            : 250px;
+  left              : 500px;
+  top               : 0px;
+  position          : absolute;
+  overflow          : hidden;
+  background-color  : rgba(0, 0, 0, 1);
+}
+
+/* ifstat */
+
+div#ifstat_oberon_up
+{
+  right             : 20px;
+  bottom            : 20px;
+  position          : absolute;
+  overflow          : hidden;
+  background-color  : rgba(0, 0, 0, 1);
+}
+
+div#ifstat_oberon_down
+{
+  right             : 340px;
+  bottom            : 20px;
+  position          : absolute;
+  overflow          : hidden;
+  background-color  : rgba(0, 0, 0, 1);
+}
+
+/* analytics */
+
+div#analytics
+{
+  right             : 0px;
+  bottom            : 130px;
+  position          : absolute;
+  overflow          : hidden;
+  z-index           : 99999;
+  background-color  : rgba(0, 0, 0, 1);
+  border            : solid 0px #F00;
+}
