@@ -17,7 +17,47 @@
 
     return $meteo;
   }
+  /////////////////////////////////////////////////
+  //  Email checker
+  /////////////////////////////////////////////////
 
+
+  function emailCheck() {
+
+    $config[] = Array (
+                'title' => 'Gmail',
+                'webmail' => 'https://mail.google.com',
+                'mailbox' => '{imap.gmail.com:993/imap/ssl}INBOX',
+                'username' => 'teamsuisseb3@gmail.com',                
+                'password' => 'teamsuisse'                     
+                );
+
+
+    $html = '';
+    
+    foreach ($config as $key => $var) {
+      $imap_mbox = imap_open($var['mailbox'], $var['username'], $var['password']);
+
+      if ($imap_mbox) {
+        //$imap_obj = imap_check($imap_mbox);
+        //$html = 'You have '.$imap_obj['Nmsgs'].' new mail';
+        $imap_status = imap_status($imap_mbox, $var['mailbox'], SA_ALL);
+        if ($imap_status) {
+          if ( $imap_status->unseen == 0 ) {
+             $html .= '<a target="_blank" href="'.$var['webmail'].'"><img src="./imap/mail2_open.png" title="No new mail on '.$var['title'].'" alt="Email"/></a>';
+          } else {
+             $html .= '<a target="_blank" href="'.$var['webmail'].'"><img src="./imap/mail2.png" title="' . $imap_status->unseen . ' new mail(s) on '.$var['title'].'" alt="Email"/></a>';
+          }
+        } else {
+          $html .= '<a target="_blank" href="'.$var['webmail'].'"><img src="./imap/error.png" title="Check status failed on '.$var['title'].' : '.imap_last_error().'" alt="Email"/></a>';
+        }
+        imap_close($imap_mbox);
+      } else {
+        $html .= '<a target="_blank" href="'.$var['webmail'].'"><img src="./imap/error.png" title="Connection failed on '.$var['title'].' : '.imap_last_error().'" alt="Email"/></a>';
+      }
+    }
+    return $html;
+  }
   /////////////////////////////////////////////////
   //  TS3
   /////////////////////////////////////////////////

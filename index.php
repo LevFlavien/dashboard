@@ -21,6 +21,11 @@
 	  <div id="ts3"></div>
       <div id="horloge"></div>
       <div id="meteo"></div>
+	  <div id="emailChecker"></div>
+	  <div id="ram">
+		<p>Utilisation de la mémoire</p>
+		<img id="ram" src="pict/ram.gif" alt="ram">
+	  </div>
 	  <div id="bandePassante">
 		<p>Utilisation de la bande passante</p>
 		<img id ="imgBandePassante" src="pict/bpassante.gif" alt="Bande passante">

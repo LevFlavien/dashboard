@@ -10,6 +10,16 @@ body
   margin            : 0px;
   overflow          : hidden;
 }
+/* email checker */
+
+#emailChecker
+{
+  top : 420px;
+  left : 25px;
+  position          : absolute;
+  background-color  : rgba(0, 0, 0, 1);
+}
+
 
 div, table, tr, td, th, h1, h2, h3, a, span, p, pre, fieldset, input, textarea, form, img, select
 {
@@ -22,6 +32,15 @@ div, table, tr, td, th, h1, h2, h3, a, span, p, pre, fieldset, input, textarea, 
 }
 
 
+div#ram
+{
+	height: 120px;
+	width: 400px;
+	position : absolute;
+	right : 100px;
+	bottom : 520px;
+
+}
 
 div#bandePassante
 {
@@ -29,7 +48,7 @@ div#bandePassante
 	width: 400px;
 	position : absolute;
 	right : 100px;
-	bottom : 400px;
+	bottom : 380px;
 
 }
 div#pingu
@@ -46,6 +65,12 @@ div#pingu
 	top : 275px;
 
 }
+
+
+img#ram{
+	width : 500px;
+}
+
 
 img#imgBandePassante{
 

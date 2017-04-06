@@ -4,6 +4,7 @@ $(document).ready(function() {
    //xplanet();
    ifstat();
    meteo();
+   emailChecker();
    //vpn();
    ping();
 });
@@ -164,5 +165,26 @@ function ifstat () {
 
   ifstat_timeout = setTimeout("ifstat()", 5000);
 }
+
+
+/* Email checker */
+
+var email_timeout;
+
+function emailChecker ()
+{
+  $.ajax({
+    async : false,
+    type: "GET",
+    url: "./ajax.php",
+    data: "block=emailChecker",
+    success: function(html){
+      $("#emailChecker").html(html);
+    }
+  });
+
+  email_timeout = setTimeout("emailChecker()", 60000);
+}
+
 
 
