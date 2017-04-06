@@ -61,7 +61,7 @@
   function ping () {
     $hosts    = array();
     $hosts_ip = array(
-                    'Google'    => array('216.58.214.4', '443'),
+                    'League of Legends EUW'    => array('216.58.214.4', '443'),
                     'Mon NAS'    => array('127.0.0.1', '443'),
 					'TeamSpeak3' =>array('127.0.0.1', '30033'),
 					'Minecraft' =>array('minecraft.hurrycane.ovh','1300')
