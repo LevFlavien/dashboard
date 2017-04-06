@@ -2,7 +2,7 @@
 
 body
 {
-  background-color  : rgba(0, 0, 50, 1);
+  background-image  : url('pict/background.jpg');
   font-family       : Verdana, "Courier New", "Lucida Console";
   font-size         : 14px;
   font-weight       : normal;
@@ -21,29 +21,113 @@ div, table, tr, td, th, h1, h2, h3, a, span, p, pre, fieldset, input, textarea, 
   color             : #FFF;
 }
 
+
+
+div#bandePassante
+{
+	height: 120px;
+	width: 400px;
+	position : absolute;
+	right : 100px;
+	bottom : 400px;
+
+}
+div#pingu
+{
+	font-family       : Verdana, "Courier New", "Lucida Console";
+	font-size         : 18
+	px;
+	font-weight       : normal;
+	
+	height: 120px;
+	width: 400px;
+	position : absolute;
+	left : 0px;
+	top : 275px;
+
+}
+
+img#imgBandePassante{
+
+	width: 500px;
+}
+
 /* main */
 
 div#main
 {
-  width             : 1366px;
-  height            : 768px;
+  width             : 1920px;
+  height            : 1080px;
   position          : relative;
+  overflow          : hidden;
+  color             : #FFF;
+}
+
+
+/* horloge */
+
+
+
+div.horloge_heure
+{
+  font-family       :"Trebuchet";
+  font-size         : 180px;
+  background-color  : rgba(0, 0, 0, 1);
+}
+
+div.horloge_date
+{
+  font-family       :"Trebuchet";
+  font-size         : 50px;
+  background-color  : rgba(0, 0, 0, 1);
+}
+
+span.horloge_grey
+{
+  font-family       :"Trebuchet";	
+  color             : #888;
+  font-size         : inherit;
+}
+
+/* meteo */
+
+
+div#meteo
+{
+	font-family       :"Trebuchet";
+  right             : 0px;
+  top               : 300px;
+  position          : absolute;
   overflow          : hidden;
   background-color  : rgba(0, 0, 0, 1);
   color             : #FFF;
+  font-weight       : bold;
+  text-align        : center;
 }
 
-div#etalon
+
+/* ts3 */
+
+div#ts3
 {
-  top               : 0px;
+  left              : 10px;
+  bottom            : 200px;
   position          : absolute;
   overflow          : hidden;
-  background-color  : rgba(0, 0, 255, 0.3);
+  background-color  : rgba(0, 0, 0, 1);
   color             : #FFF;
-  font-size         : 50px;
+  font-weight       : bold;
+
 }
 
-/* horloge */
+td.ts3_user
+{
+  text-align        : left;
+  font-size         : 30px;
+  padding-left      : 10px;
+}
+
+/* ping */
 
 div#horloge
 {
@@ -57,76 +141,10 @@ div#horloge
   text-align        : center;
 }
 
-div.horloge_heure
-{
-  font-size         : 180px;
-  background-color  : rgba(0, 0, 0, 1);
-}
-
-div.horloge_date
-{
-  font-size         : 50px;
-  background-color  : rgba(0, 0, 0, 1);
-}
-
-span.horloge_grey
-{
-  color             : #888;
-  font-size         : inherit;
-}
-
-/* meteo */
-
-div#meteo
-{
-  right             : 0px;
-  top               : 300px;
-  position          : absolute;
-  overflow          : hidden;
-  background-color  : rgba(0, 0, 0, 1);
-  color             : #FFF;
-  font-weight       : bold;
-  text-align        : center;
-}
-
-div#meteo_black
-{
-  right             : 0px;
-  top               : 420px;
-  width             : 600px;
-  height            : 100px;
-  position          : absolute;
-  z-index           : 9999;
-  background-color  : rgba(0, 0, 0, 1);
-}
-
-/* ts3 */
-
-div#ts3
-{
-  left              : 340px;
-  bottom            : 10px;
-  position          : absolute;
-  overflow          : hidden;
-  background-color  : rgba(0, 0, 0, 1);
-  color             : #FFF;
-  font-weight       : bold;
-  text-align        : center;
-}
-
-td.ts3_user
-{
-  text-align        : left;
-  font-size         : 30px;
-  padding-left      : 10px;
-}
-
-/* ping */
-
 div#ping
 {
   left              : 0px;
-  bottom            : 0px;
+  top            	: 20px;
   position          : absolute;
   overflow          : hidden;
   background-color  : rgba(0, 0, 0, 1);
@@ -234,4 +252,16 @@ div#analytics
   z-index           : 99999;
   background-color  : rgba(0, 0, 0, 1);
   border            : solid 0px #F00;
+}
+
+/* snow */
+
+div.snow
+{
+  position          : absolute;
+  width             : 1px;
+  height            : 1px;
+  font-weight       : bold;
+  color             : #FFF;
+  z-index           : 99999;
 }

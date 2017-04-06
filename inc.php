@@ -13,7 +13,7 @@
 
   function meteo () {
 
-    $meteo  = '<div id="cont_NDQxMDl8NHw0fDF8MXwwMDAwMDB8MXxGRkZGRkZ8Y3wx"><div id="spa_NDQxMDl8NHw0fDF8MXwwMDAwMDB8MXxGRkZGRkZ8Y3wx"><a id="a_NDQxMDl8NHw0fDF8MXwwMDAwMDB8MXxGRkZGRkZ8Y3wx" href="http://www.meteocity.com/france/nantes_v44109/" target="_blank" style="color:#333;text-decoration:none;">Météo Nantes</a> ©<a href="http://www.meteocity.com">meteocity.com</a></div><script type="text/javascript" src="http://widget.meteocity.com/js/NDQxMDl8NHw0fDF8MXwwMDAwMDB8MXxGRkZGRkZ8Y3wx"></script></div>';
+    $meteo  = '<div id="cont_NDQxMDl8NHw0fDF8MXwwMDAwMDB8MXxGRkZGRkZ8Y3wx"><div id="spa_NDQxMDl8NHw0fDF8MXwwMDAwMDB8MXxGRkZGRkZ8Y3wx"><a id="a_NDQxMDl8NHw0fDF8MXwwMDAwMDB8MXxGRkZGRkZ8Y3wx" href="http://www.meteocity.com/france/nantes_v44109/" target="_blank" style="color:#333;text-decoration:none;">Météo Nantes</a></div><script type="text/javascript" src="http://widget.meteocity.com/js/NDQxMDl8NHw0fDF8MXwwMDAwMDB8MXxGRkZGRkZ8Y3wx"></script></div>';
 
     return $meteo;
   }
@@ -24,7 +24,7 @@
 
   function ts3 () {
 
-    $host_ip    = '';
+    $host_ip    = '127.0.0.1';
     $host_port  = '30033';
     $socket     = 0;
     $socket     = @fsockopen($host_ip, $host_port, $errno, $errstr, 3);
@@ -32,10 +32,10 @@
 
     if($socket && !$errno){
       require_once("./TS3_PHP_Framework-1.1.12/libraries/TeamSpeak3/TeamSpeak3.php");
-      $ts3_ServerInstance = TeamSpeak3::factory("serverquery://login:password@$host_ip:10011/");
+      $ts3_ServerInstance = TeamSpeak3::factory("serverquery://serveradmin:puK6caTK@127.0.0.1:10011/");
       $ts3_VirtualServer  = $ts3_ServerInstance->serverGetById(1);
 
-      $html .= '<img width="200px" src="pict/triton_ts3.png" style="margin-bottom : 10px;">';
+      $html .= '<img width="200px" src="pict/banniere.png" style="margin-bottom : 10px;">';
       $html .= '<table cellspacing="0px" cellpadding="0px">';
       foreach($ts3_VirtualServer->clientList() as $client){
         if($client["client_unique_identifier"] == 'serveradmin'){continue;}
@@ -62,7 +62,9 @@
     $hosts    = array();
     $hosts_ip = array(
                     'Google'    => array('216.58.214.4', '443'),
-                    'NAS Porn'    => array('127.0.0.1', '443')
+                    'Mon NAS'    => array('127.0.0.1', '443'),
+					'TeamSpeak3' =>array('127.0.0.1', '30033'),
+					'Minecraft' =>array('minecraft.hurrycane.ovh','1300')
                   );
 
     foreach($hosts_ip as $hostname => $host_data){
@@ -81,7 +83,7 @@
       if($c == 0){$html .= '<tr>';}
       $html .= '<td class="ping ping_'.$host_status.'">'.$hostname.'</td>';
       $c++;
-      if($c == 2){$c = 0; $html .= '</tr>';}
+      if($c == 1){$c = 0; $html .= '</tr>';}
     }
     if($c != 0){$html .= '</tr>';}
     $html .= '</table>';

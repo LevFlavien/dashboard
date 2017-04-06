@@ -17,17 +17,18 @@
   <body>
 
     <div id="main">
+	  <div id="ping"></div>
+	  <div id="ts3"></div>
       <div id="horloge"></div>
       <div id="meteo"></div>
-      <div id="ts3"></div>
-      <div id="ping"></div>
-      <div id="vpn"></div>
-      <div id="latency"></div>
-      <div id="earth"><img id="img_earth" src="pict/blank.png"></div>
-      <div id="moon"><img id="img_moon" src="pict/blank.png"></div>
-      <div id="ifstat_oberon_up"><img id="img_oberon_up" src="pict/blank.png"></div>
-      <div id="ifstat_oberon_down"><img id="img_oberon_down" src="pict/blank.png"></div>
+	  <div id="bandePassante">
+		<p>Utilisation de la bande passante</p>
+		<img id ="imgBandePassante" src="pict/bpassante.gif" alt="Bande passante">
+		<img id ="imgBandePassante" src="pict/bpassanteUpload.gif" alt="Bande passante">
+	</div>
+
+    <!--  <div id="ifstat_oberon_up"><img id="img_oberon_up" src="pict/blank.png"></div>
+      <div id="ifstat_oberon_down"><img id="img_oberon_down" src="pict/blank.png"></div> -->
     </div>
-<div id="meteooooo">meteo<script charset='UTF-8' src='http://www.meteofrance.com/mf3-rpc-portlet/rest/vignettepartenaire/441090/type/VILLE_FRANCE/size/PAYSAGE_VIGNETTE' type='text/javascript'></script></div>
   </body>
 </html>
